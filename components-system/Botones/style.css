@@ -1,0 +1,114 @@
+:root {
+    --color-primary: hsl(213,100%,53%);
+    --color-primary-hover: hsl(213,100%,65%);
+    --color-primary-active: #085FCA;
+    --color-secondary: white;
+    --color-secondary-text: hsl(213,100%,53%);
+    --color-secondary-hover: hsl(213,100%,65%);
+    --color-disabled: #9f9d9d;
+    --color-disabled-hover: #827f7f;
+    --color-bg: #ededed;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-bg);
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 52px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 1.45;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin: 15px;
+    white-space: nowrap;
+    min-width: max-content;
+
+    &:disabled {
+        opacity: 0.2;
+        cursor: not-allowed;
+    }
+}
+
+.btn--primary {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+
+    &:hover {
+        background-color: var(--color-primary-hover);
+    }
+
+    &:active {
+        background-color: var(--color-primary-active);
+    }
+}
+
+.btn--secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+    border: 2px solid currentColor;
+
+    &:hover {
+        color: var(--color-secondary-hover);
+        background-color: var(--color-secondary);
+    }
+
+    &:active {
+        color: var(--color-primary-active);
+    }
+}
+
+.btn--disabled--primary {
+    background-color: var(--color-disabled);
+    color: white;
+    border: none;
+
+    &:hover {
+        background-color: var(--color-disabled-hover);
+    }
+}
+
+.btn--disabled--secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-disabled);
+    border: 2px solid currentColor;
+
+    &:hover {
+        color: var(--color-disabled-hover);
+        border-color: var(--color-disabled-hover);
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    background: var(--color-bg);
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+    font-weight: 200;
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content:center;
+    margin-top: 15px;
+}
